@@ -7,9 +7,9 @@ RUN apt-get install -y pulseaudio
 
 # dependenceis for mimic3
 RUN apt-get install -y libespeak-ng1 python3 python3-pip
-RUN cd /tmp && wget https://github.com/MycroftAI/mimic3/releases/download/release%2Fv0.2.4/mycroft-mimic3-tts_0.2.4_amd64.deb && dpkg -i /tmp/mycroft-mimic3-tts_0.2.4_amd64.deb
+RUN mkdir /mimic
+RUN cd /mimic && wget https://github.com/MycroftAI/mimic3/releases/download/release%2Fv0.2.4/mycroft-mimic3-tts_0.2.4_amd64.deb && dpkg -i /mimic/mycroft-mimic3-tts_0.2.4_amd64.deb
 RUN python3 -V
-
 
 # install aplay binary
 RUN apt-get install -y alsa-utils
