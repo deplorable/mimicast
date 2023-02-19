@@ -1,4 +1,4 @@
-# mimicbase
+# mimicdock
 
 Unofficial Docker Image for Casting TTS Audio over Networks
 
